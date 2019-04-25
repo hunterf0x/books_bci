@@ -1,0 +1,25 @@
+<div>
+  <br>
+
+  <div class="container">
+    <div fxLayout="row" fxLayoutAlign="center center" class="content">
+      <mat-card class="card-book">
+        <mat-card-header>
+          <mat-card-title>BOOK {{book.title}}</mat-card-title>
+          <mat-card-subtitle>{{book.category}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-lg-image src="{{book.thumbnailUrl}}" alt="{{book.title}}">
+        <mat-card-content>
+          <p><strong>AUTHOR:</strong> {{book.author}}</p>
+          <p>
+            {{book.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="goBack()" mat-button>BACK</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

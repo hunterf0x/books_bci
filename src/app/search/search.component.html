@@ -1,0 +1,13 @@
+<div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
+  <mat-form-field>
+    <mat-select [formControl]="bookServerSideCtrl" placeholder="Author">
+      <!-- place ngx-mat-select-search inside mat-option to allow opening without initial selection -->
+      <mat-option>
+        <ngx-mat-select-search [formControl]="bookServerSideFilteringCtrl" [searching]="searching"></ngx-mat-select-search>
+      </mat-option>
+      <mat-option *ngFor="let book of filteredServerSideBooks | async" [value]="book">
+        {{book.author}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
